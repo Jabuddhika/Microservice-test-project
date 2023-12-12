@@ -6,6 +6,7 @@ import dep10ijse.school.service.SchoolService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class SchoolServiceImpl implements SchoolService {
@@ -25,5 +26,10 @@ public class SchoolServiceImpl implements SchoolService {
     @Override
     public List<School> findAllSchools() {
         return repository.findAll();
+    }
+
+    @Override
+    public Optional<School> findById(Integer id) {
+        return repository.findById(id);
     }
 }

@@ -23,3 +23,6 @@ spring:
     database: mysql
     database-platform: org.hibernate.dialect.MySQLDialect
 
+application:
+  config:
+    student_url: http://localhost:8090/api/v1/students

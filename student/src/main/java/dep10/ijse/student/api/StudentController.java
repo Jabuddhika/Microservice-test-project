@@ -30,4 +30,11 @@ public class StudentController {
         return service.findAllStudents();
 
     }
+
+    @GetMapping("/school/{school_id}")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public List<Student> findAllStudentsBySchoolId(@PathVariable("school_id") Integer schoolId){
+        return service.findAllStudentsBySchoolId(schoolId);
+
+    }
 }
